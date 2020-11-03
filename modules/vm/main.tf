@@ -24,6 +24,7 @@ resource "oci_core_instance" "k8s_vm" {
     subnet_id        = var.subnet_id
     display_name     = "primaryVnic"
     assign_public_ip = var.allow_public_ssh
+    nsg_ids          = [var.nsg_id]
     hostname_label   = "${var.name}Vm${count.index}"
   }
 

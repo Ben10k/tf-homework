@@ -25,3 +25,6 @@ variable "vm_shape" {
 variable "vm_count" {
   type = number
 }
+variable "nsg_id" {
+  type = string
+}

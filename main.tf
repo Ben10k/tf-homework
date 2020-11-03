@@ -35,6 +35,7 @@ module "k8s_vms" {
   availability_domain_numbers = var.availability_domain_numbers
   vm_count                    = var.vm_count
   vm_shape                    = var.vm_shape
+  nsg_id                      = module.k8s_network.nsg_id
 }
 
 resource "random_password" "db_password" {
